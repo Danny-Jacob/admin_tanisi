@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Jobs from "./components/Jobs";
+import Login from "./components/Login"
+import Navbar from "./components/Navbar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Users from "./components/Users";
+import AddJob from "./components/AddJob";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return (<>
+    {/* <Login/> */}
+    {/* <Navbar/> */}
+    <Router>
+      {/* <Navbar /> */}
+      <Routes>
+        <Route path="/" exact element={<Login />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/add_job" element={<AddJob />} />
+      </Routes>
+    </Router>
+    </>
   );
 }
 
