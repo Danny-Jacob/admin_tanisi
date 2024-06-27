@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import "../assets/styles/login.css";
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
+  const navigate = useNavigate();
+
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
 
   const handleSignUpClick = () => {
     setIsRightPanelActive(true);
+  //  navigate("/jobs");
+
   };
 
   const handleSignInClick = () => {
     setIsRightPanelActive(false);
+    // navigate("/jobs");
   };
   return (
-    <div>
+    <div style={{display: "flex",
+      justifyContent: "center",
+      height: "100vh",
+      alignItems: "center"}}>
       <div>
         <div
           className={`container ${
@@ -39,7 +48,7 @@ const Login = () => {
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />
               <br></br>
-              <button>Sign Up</button>
+              <button onClick={() => navigate("/jobs")}>Sign Up</button>
             </form>
           </div>
           <div className="form-container sign-in-container">
@@ -62,7 +71,7 @@ const Login = () => {
               <input type="password" placeholder="Password" />
               {/* <a href="#">Forgot your password?</a> */}
               <br></br>
-              <button>Sign In</button>
+              <button onClick={() => navigate("/jobs")}>Sign In</button>
             </form>
           </div>
           <div className="overlay-container">
