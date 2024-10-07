@@ -47,7 +47,7 @@ const AddJob = () => {
   return (
     <div style={{ padding: "2rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <h1>Add Job</h1>
+      <div style={{fontSize:"24px"}}>Add Job</div>
         <div style={{ display: "flex", gap: "1rem" }}>
           <button
             onClick={() => navigate("/jobs")}

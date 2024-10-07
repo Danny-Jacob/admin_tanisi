@@ -38,8 +38,10 @@ const Message = () => {
         >
           {/* <button onClick={() => navigate("/add_job")}>Add Job</button> */}
         </div>
+        <div style={{fontSize:"24px"}}>Connections</div>
+        
         <br></br>
-        <div style={{ border: "1px solid grey", padding: "0.5rem" ,display:"flex", fontWeight:"bold"}}>
+        <div style={{ border: "1px solid #cccccc", padding: "0.5rem" ,display:"flex", fontWeight:"bold",color:"white",background:"#c32f49"}}>
           <div style={{width:"25%"}}>First Name</div>
           <div style={{width:"25%"}}>Email</div>
           <div style={{width:"25%"}}>Mobile</div>
@@ -48,7 +50,7 @@ const Message = () => {
   
         </div>
         {messages.map(message => (
-        <div style={{ border: "1px solid grey", padding: "0.5rem" ,display:"flex",cursor:"pointer" }}onClick={() => navigate(`/message/${message.id}`)}>
+        <div style={{ border: "1px solid #cccccc", padding: "0.5rem" ,display:"flex",cursor:"pointer" }}onClick={() => navigate(`/message/${message.id}`)}>
           <div style={{width:"25%"}}>{message.firstname}</div>
           <div style={{width:"25%"}}>{message.email}</div>
           <div style={{width:"25%"}}>{message.mobile}</div>

@@ -45,8 +45,10 @@ const Users = () => {
         >
           {/* <button onClick={() => navigate("/add_job")}>Add Job</button> */}
         </div>
+        <div style={{fontSize:"24px"}}>Applicants</div>
         <br></br>
-        <div style={{ border: "1px solid grey", padding: "0.5rem" ,display:"flex", fontWeight:"bold"}}>
+
+        <div style={{border: "1px solid #cccccc", padding: "0.5rem" ,display:"flex", fontWeight:"bold",color:"white",background:"#c32f49"}}>
           <div style={{width:"25%"}}>Full Name</div>
           <div style={{width:"25%"}}>Email</div>
           <div style={{width:"25%"}}>Mobile</div>
@@ -55,7 +57,7 @@ const Users = () => {
   
         </div>
         {users.map(user => (
-        <div style={{ border: "1px solid grey", padding: "0.5rem" ,display:"flex",cursor:"pointer" }}onClick={() => navigate(`/user/${user.userId}`)}>
+        <div style={{ border: "1px solid #cccccc", padding: "0.5rem" ,display:"flex",cursor:"pointer" }}onClick={() => navigate(`/user/${user.userId}`)}>
           <div style={{width:"25%"}}>{user.fullname}</div>
           <div style={{width:"25%"}}>{user.email}</div>
           <div style={{width:"25%"}}>{user.mobile}</div>

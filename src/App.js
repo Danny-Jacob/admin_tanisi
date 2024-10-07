@@ -10,6 +10,8 @@ import Job from './components/Job';
 import User from './components/User';
 import MessageDetail from './components/MessageDetail';
 import ProtectedRoute from './components/PrivateRoute'; // Import the ProtectedRoute component
+import AdminDetails from './components/AdminDetails';
+import EditJobs from './components/EditJobs';
 
 function App() {
   return (
@@ -26,7 +28,11 @@ function App() {
         <Route path="/messages" element={<ProtectedRoute element={<Message />} />} />
         <Route path="/message/:messageId" element={<ProtectedRoute element={<MessageDetail />} />} />
         <Route path="/job/:jobId" element={<ProtectedRoute element={<Job />} />} />
+        <Route path="/edit_job/:jobId" element={<ProtectedRoute element={<EditJobs />} />} />
+
         <Route path="/user/:userId" element={<ProtectedRoute element={<User />} />} />
+        <Route path="/admin/:adminId" element={<ProtectedRoute element={<AdminDetails />} />} />
+
 
         {/* Catch-all route */}
         <Route path="*" element={<p>404 Error - Nothing here...</p>} />

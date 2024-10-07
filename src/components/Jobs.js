@@ -33,14 +33,16 @@ const Jobs = () => {
         style={{
           display: "flex",
           width: "100%",
-          flexDirection: "row-reverse",
+          justifyContent:"space-between"
 
         }}
       >
+        <div style={{fontSize:"24px"}}>Listed Jobs</div>
+        
         <button onClick={() => navigate("/add_job")}>Add Job</button>
       </div>
       <br></br>
-      <div style={{ border: "1px solid grey", padding: "0.5rem" ,display:"flex", fontWeight:"bold"}}>
+      <div style={{ border: "1px solid #cccccc", padding: "0.5rem" ,display:"flex", fontWeight:"bold",color:"white",background:"#c32f49"}}>
         <div style={{width:"25%"}}>Job Title</div>
         <div style={{width:"25%"}}>Company</div>
         <div style={{width:"25%"}}>Experience</div>
@@ -49,7 +51,7 @@ const Jobs = () => {
 
       </div>
       {jobs.map(job => (
-      <div style={{ border: "1px solid grey", padding: "0.5rem" ,display:"flex",cursor:"pointer" }}onClick={() => navigate(`/job/${job.jobId}`)}>
+      <div style={{ border: "1px solid #cccccc", padding: "0.5rem" ,display:"flex",cursor:"pointer" }}onClick={() => navigate(`/job/${job.jobId}`)}>
         <div style={{width:"25%"}}>{job.jobTitle}</div>
         <div style={{width:"25%"}}>{job.company}</div>
         <div style={{width:"25%"}}>{job.experience} yrs</div>

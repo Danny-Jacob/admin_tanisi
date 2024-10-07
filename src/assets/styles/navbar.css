@@ -1,6 +1,8 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.css);
 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
+
 .fa-2x {
 font-size: 2em;
 }
@@ -21,8 +23,11 @@ overflow:visible;
 }
 
 .main-menu {
-background:#212121;
+background:rgb(255,255,255,0.7);
 border-right:1px solid #e5e5e5;
+backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 position:fixed;
 top:0;
 bottom:0;
@@ -51,8 +56,8 @@ position:relative;
 display:table;
 border-collapse:collapse;
 border-spacing:0;
-color:#999;
- font-family: arial;
+color:#c32f49;
+ font-family: 'Raleway';
 font-size: 14px;
 text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
@@ -78,7 +83,7 @@ vertical-align:middle;
 width:190px;
 font-size: x-large;
 padding: 1rem;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .main-menu>ul.logout {
@@ -115,7 +120,7 @@ padding:0;
 }
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
-background-color:#000000;
+background-color:#c32f49;
 }
 .area {
 float: left;
@@ -123,9 +128,17 @@ background: #e2e2e2;
 width: 100%;
 height: 100%;
 }
-@font-face {
+/* @font-face {
   font-family: 'Titillium Web';
   font-style: normal;
   font-weight: 300;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+} */
+@font-face {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  src: url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
 }
+

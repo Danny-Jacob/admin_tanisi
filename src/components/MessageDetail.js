@@ -43,6 +43,8 @@ const MessageDetail = () => {
 >
   <button onClick={deleteJob}>Delete Job</button>
 </div> */}
+
+<div style={{fontSize:"24px"}}>Connection Details</div>
         <br></br>
 
         {message.map((message) => (
@@ -66,7 +68,7 @@ const MessageDetail = () => {
             <br></br>
             <div style={{ color: "grey" }}>Email:</div>
             <div style={{ fontSize: "larger", fontWeight: "bold" }}>
-              {message.email} yrs
+              {message.email} 
             </div>
             <br></br>
             <div style={{ color: "grey" }}>Contact Number:</div>

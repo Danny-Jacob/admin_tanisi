@@ -54,10 +54,12 @@ const User = () => {
           style={{
             display: "flex",
             width: "100%",
-            flexDirection: "row-reverse",
-          }}
-        >
-          <button onClick={deleteUser}>Delete User</button>
+            justifyContent:"space-between"
+
+        }}
+      >
+        <div style={{fontSize:"24px"}}>Applicant Details</div>
+          <button onClick={deleteUser}>Delete Applicant</button>
         </div>
         <br></br>
 

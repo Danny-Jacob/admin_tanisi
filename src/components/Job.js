@@ -46,11 +46,14 @@ const Job = () => {
   style={{
     display: "flex",
     width: "100%",
-    flexDirection: "row-reverse",
+    justifyContent:"space-between"
 
-  }}
->
-  <button onClick={deleteJob}>Delete Job</button>
+        }}
+      >
+        <div style={{fontSize:"24px"}}>Job Details</div>
+        <div style={{display:"flex",gap:"1rem"}}><button onClick={() => navigate(`/edit_job/${jobId}`)}>Edit Job</button>
+        <button onClick={deleteJob}>Delete Job</button></div>
+  
 </div>
 <br></br>
 
