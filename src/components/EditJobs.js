@@ -26,7 +26,7 @@ const EditJobs = () => {
       const accessToken = localStorage.getItem("accessToken");
       try {
         const response = await fetch(
-          `http://localhost:5000/jobs?jobId=${jobId}`,
+          `https://tanisiinc.com/api/jobs?jobId=${jobId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -77,7 +77,7 @@ const EditJobs = () => {
 
     const accessToken = localStorage.getItem("accessToken");
     try {
-      const response = await fetch("http://localhost:5000/editJob", {
+      const response = await fetch("https://tanisiinc.com/api/editJob", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

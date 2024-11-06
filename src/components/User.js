@@ -15,7 +15,7 @@ const User = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/users?userId=${userId}`,
+          `https://tanisiinc.com/api/users?userId=${userId}`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -35,7 +35,7 @@ const User = () => {
   }, [userId]);
   const deleteUser = async () => {
     try {
-      await axios.delete(`http://localhost:5000/deleteUser?userId=${userId}`, {
+      await axios.delete(`https://tanisiinc.com/api/deleteUser?userId=${userId}`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

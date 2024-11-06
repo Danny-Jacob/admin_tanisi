@@ -13,7 +13,7 @@ const Admin = () => {
     useEffect(() => {
       const fetchAdmins = async () => {
           try {
-              const response = await axios.get('http://localhost:5000/getAdmins', {
+              const response = await axios.get('https://tanisiinc.com/api/getAdmins', {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
                 }

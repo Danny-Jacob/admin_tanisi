@@ -14,7 +14,7 @@ const MessageDetail = () => {
     const fetchMesage = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/messages?messageId=${messageId}`
+          `https://tanisiinc.com/api/messages?messageId=${messageId}`
         );
         setMessage(response.data.data);
         console.log("yes");

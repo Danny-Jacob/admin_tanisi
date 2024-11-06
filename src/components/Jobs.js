@@ -13,7 +13,7 @@ const Jobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/jobs');
+            const response = await axios.get('https://tanisiinc.com/api/jobs');
             setJobs(response.data.data);
         } catch (err) {
             setError(err.message);

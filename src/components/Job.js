@@ -13,7 +13,7 @@ const Job = () => {
     useEffect(() => {
         const fetchJob = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/jobs?jobId=${jobId}`);
+                const response = await axios.get(`https://tanisiinc.com/api/jobs?jobId=${jobId}`);
                 setJobs(response.data.data);
                 console.log("yes");
             } catch (err) {
@@ -27,7 +27,7 @@ const Job = () => {
     }, [jobId]);
     const deleteJob = async () => {
         try {
-            await axios.delete(`http://localhost:5000/deleteJob?jobId=${jobId}`, {
+            await axios.delete(`https://tanisiinc.com/api/deleteJob?jobId=${jobId}`, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
                 }

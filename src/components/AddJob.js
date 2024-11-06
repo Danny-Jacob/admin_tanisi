@@ -24,7 +24,7 @@ const AddJob = () => {
 
     const accessToken = localStorage.getItem('accessToken');
     try {
-      const response = await fetch("http://localhost:5000/addJob", {
+      const response = await fetch("https://tanisiinc.com/api/addJob", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

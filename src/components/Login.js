@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/registerAdmin";
+    const url = "https://tanisiinc.com/api/registerAdmin";
 
     try {
       const response = await fetch(url, {
@@ -70,7 +70,7 @@ const Login = () => {
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:5000/adminlogin";
+    const url = "https://tanisiinc.com/api/adminlogin";
 
     try {
       const response = await fetch(url, {

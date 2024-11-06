@@ -15,7 +15,7 @@ const AdminDetails = () => {
     useEffect(() => {
         const fetchAdmin = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/getadmins?adminId=${adminId}`, {
+                const response = await axios.get(`https://tanisiinc.com/api/getadmins?adminId=${adminId}`, {
                   headers: {
                       'Authorization': `Bearer ${accessToken}`
                   }
@@ -33,7 +33,7 @@ const AdminDetails = () => {
     }, [adminId]);
     const deleteAdmin = async () => {
         try {
-            await axios.delete(`http://localhost:5000/deleteAdmin?adminId=${adminId}`, {
+            await axios.delete(`https://tanisiinc.com/api/deleteAdmin?adminId=${adminId}`, {
                 headers: {
                     'Authorization': `Bearer ${accessToken}`
                 }
