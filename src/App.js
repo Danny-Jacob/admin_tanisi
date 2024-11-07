@@ -15,7 +15,7 @@ import EditJobs from './components/EditJobs';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/adminportal">
       <Routes>
         {/* Public Route */}
         <Route path="/" exact element={<Login />} />
